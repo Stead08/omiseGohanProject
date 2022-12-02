@@ -9,10 +9,11 @@ shop_name_list = []
 with open(csv1) as c1:
     reader = csv.reader(c1)
     csvfile_header = next(reader)
-    # csvファイルのデータをループ
+    # csvファイルのデータをループ(飲食店の名前だけのリストを作成）
     for row in reader:
         # A列を配列へ格納
         shop_name_list.append(str(row[0]))
+#飲食店の緯度経度情報を二次元配列で取得
 with open(csv1) as c1:
     shop_list = list(csv.reader(c1))
 town_name_list = []
@@ -53,15 +54,29 @@ dis = geodesic(shop_selected_longitude_and_latitude, town_selected_longitude_and
 #google mapライブラリのインポート
 import googlemaps
 from datetime import datetime
-gmaps = googlemaps.Client(key='')
+import googlemapAPIKey
+gmaps = googlemaps.Client(key=googlemapAPIKey)
 now = datetime.now()
 directions_result = gmaps.directions(shop_selected_longitude_and_latitude,
                                      town_selected_longitude_and_latitude,
                                      departure_time=now)
-distance_driving = directions_result[0]['legs'][0]['distance']['text']
+distance_driving_km = directions_result[0]['legs'][0]['distance']['text']
+#タクシー運賃を計算
+## 距離運賃
+#運転距離をmに換算
+import math
+distance_driving_km.split()
+distance_driving_m = math.floor(float(distance_driving_km[0]) * 1000)
+if float(distance_driving_m) >= 1000:
+    fare_distance = round(580 + 90 * (distance_driving_m - 1000) / 248)
+else:
+    fare_distance = 580
+
 #出力（テクスト）
 dis_round = round(dis, 2)
 st.subheader('直線距離')
 st.write('{}km'.format(dis_round))
 st.subheader('運転距離')
-st.write('{}'.format(distance_driving))
+st.write('{}'.format(distance_driving_km))
+st.subheader('予想運賃')
+st.write("{}円".format(fare_distance))
