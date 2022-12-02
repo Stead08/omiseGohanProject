@@ -55,7 +55,7 @@ dis = geodesic(shop_selected_longitude_and_latitude, town_selected_longitude_and
 import googlemaps
 from datetime import datetime
 import googlemapAPIKey
-gmaps = googlemaps.Client(key=googlemapAPIKey)
+gmaps = googlemaps.Client(key="Apikey")
 now = datetime.now()
 directions_result = gmaps.directions(shop_selected_longitude_and_latitude,
                                      town_selected_longitude_and_latitude,
