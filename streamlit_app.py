@@ -28,7 +28,8 @@ with open(csv2) as c2:
 with open(csv2) as c2:
     town_list = list(csv.reader(c2))
 #タイトルを表示
-st.title('おみせごはんプロジェクト配達距離計算ツール')
+st.title('おみせごはんプロジェクト')
+st.title('配達距離計算ツール')
 #飲食店リストを表示（ドロップダウン)
 st.subheader("飲食店を選択")
 shop_selected = st.selectbox("飲食店を一つ選択してください", shop_name_list)
