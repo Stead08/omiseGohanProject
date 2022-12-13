@@ -1,6 +1,8 @@
-# APP URL:
-https://stead08-omisegohanproject-streamlit-app-04qdaj.streamlit.app/
+
 # omiseGohanProject
+## APP URL:
+https://stead08-omisegohanproject-streamlit-app-04qdaj.streamlit.app/
+
 「おみせごはんプロジェクト」とは
 福島県会津若松市と福島大学吉田ゼミナールによるタクシーフードデリバリーサービスである。
 
@@ -16,6 +18,7 @@ https://stead08-omisegohanproject-streamlit-app-04qdaj.streamlit.app/
   損益分岐点の計算
   
   
-ページ（画像は開発中のもの）
-![localhost_8501_](https://user-images.githubusercontent.com/62312581/205318652-c9c4b70f-78c7-43a9-94cb-7734c7fdbdc4.png)
+## ページ（画像は開発中のもの）
+
+![stead08-omisegohanproject-streamlit-app-04qdaj streamlit app_](https://user-images.githubusercontent.com/62312581/207275050-5d415068-0512-4faf-bab8-66b5042af9ae.png)
 
